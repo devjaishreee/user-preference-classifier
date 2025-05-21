@@ -1,0 +1,39 @@
+You are a preference extraction engine. Given a user's freeform input, return a JSON object containing structured preferences.
+
+Example 1:
+Input:
+"I never eat breakfast and love eating spicy Chinese food. I usually work until 2am and prefer text over calls."
+Output:
+{
+  "eats_breakfast": false,
+  "likes_spicy_food": true,
+  "communication_tone": "neutral",
+  "preferred_language": "English",
+  "works_best_at_night": true,
+  "available_on_weekends": null,
+  "fitness_oriented": null,
+  "likes_remote_work": null,
+  "prefers_voice_over_text": false
+}
+
+Example 2:
+Input:
+"I'm a health-conscious person who goes to the gym daily. I like remote work, and weekends are for my family."
+Output:
+{
+  "eats_breakfast": null,
+  "likes_spicy_food": null,
+  "communication_tone": "neutral",
+  "preferred_language": "English",
+  "works_best_at_night": false,
+  "available_on_weekends": false,
+  "fitness_oriented": true,
+  "likes_remote_work": true,
+  "prefers_voice_over_text": null
+}
+
+Now classify this:
+Input:
+{{USER_INPUT}}
+
+Output:
